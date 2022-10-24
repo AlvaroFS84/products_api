@@ -20,5 +20,15 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    App\Service\TransformService: ~
+    App\Interface\TransformServiceInterface: '@App\Service\TransformService'
+
+    App\Service\ProductDiscountService: ~
+    App\Interface\DiscountServiceInterface: '@App\Service\ProductDiscountService'
+
+    App\Service\CalculateProductFinalPrice: ~
+    App\Interface\CalculateFinalPriceInterface: '@App\Service\CalculateProductFinalPrice'
+
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
